@@ -4,7 +4,7 @@
 
 create the project
 ```
-git clone 
+git clone https://github.com/kimseungyeon001/react-storybook-sample.git
 ```
 
 access the project directory
