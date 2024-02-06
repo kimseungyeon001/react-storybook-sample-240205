@@ -17,7 +17,7 @@ install dependencies
 npm install
 ```
 
-setting .config.ts
+setting config.ts
 ```
 cp ./src/config.local.ts ./src/config.ts
 ```
