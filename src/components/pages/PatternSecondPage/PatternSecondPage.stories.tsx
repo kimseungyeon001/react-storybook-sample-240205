@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { StorybookWrapper } from '../../../utils/StorybookWrapper'
+import { StorybookWrapper } from '@/utils/StorybookWrapper'
 import {
   buildFetch,
   buildFetchLoading,
   buildFetchError,
-} from '../../../mocks/handlers'
+} from '@/mocks/handlers'
 
 import { PatternSecondPage } from './PatternSecondPage'
 

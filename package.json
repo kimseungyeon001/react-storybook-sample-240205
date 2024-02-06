@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:eslint": "eslint --ext ts,tsx --report-unused-disable-directives --resolve-plugins-relative-to . --max-warnings 0 src/",
+    "lint:prettier": "prettier --check 'src/**/*.{ts,tsx,json,yml,yaml,md}'",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -38,11 +39,13 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.55.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.6.15",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "jsdom": "^24.0.0",
     "msw": "^2.1.4",
     "msw-storybook-addon": "^2.0.0--canary.122.0f49e5c.0",
@@ -52,6 +55,7 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
+    "vite-tsconfig-paths": "^4.3.1",
     "vitest": "^1.2.1"
   },
   "volta": {

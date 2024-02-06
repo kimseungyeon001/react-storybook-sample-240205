@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import { DefaultLayout } from '../../common/DefaultLayout'
-import { ErrorPage } from '../ErrorPage'
-import { LoadingPage } from '../LoadingPage'
-import { config } from '../../../config'
+import { DefaultLayout } from '@/components/common/DefaultLayout'
+import { ErrorPage } from '@/components/pages/ErrorPage'
+import { LoadingPage } from '@/components/pages/LoadingPage'
+import { config } from '@/config'
 
-const baseUrl = config.baseUrl
+const { baseUrl } = config
 
 export function PatternSecondPage() {
   const initialData = ''
@@ -15,7 +15,7 @@ export function PatternSecondPage() {
   } = useQuery({
     queryKey: ['page'],
     queryFn: async (): Promise<string> => {
-      const response = await fetch(baseUrl + '/page')
+      const response = await fetch(`${baseUrl}/page`)
       return response.json()
     },
   })

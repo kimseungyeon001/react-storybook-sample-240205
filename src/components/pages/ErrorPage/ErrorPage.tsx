@@ -1,4 +1,4 @@
-import { DefaultLayout } from '../../common/DefaultLayout'
+import { DefaultLayout } from '@/components/common/DefaultLayout'
 
 interface ErrorPageProps {
   message: string

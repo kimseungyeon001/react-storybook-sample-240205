@@ -1,5 +1,5 @@
-import { DefaultLayout } from '../../common/DefaultLayout'
-import { Spinner } from '../../common/Spinner'
+import { DefaultLayout } from '@/components/common/DefaultLayout'
+import { Spinner } from '@/components/common/Spinner'
 
 interface LoadingPageProps {
   message: string

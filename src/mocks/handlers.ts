@@ -1,7 +1,7 @@
 import { http, HttpResponse, delay } from 'msw'
-import { config } from '../config'
+import { config } from '@/config'
 
-const baseUrl = config.baseUrl
+const { baseUrl } = config
 
 export function buildFetch() {
   return http.get(`${baseUrl}/page`, async () => {
