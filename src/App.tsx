@@ -3,20 +3,14 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { PatternFirstPage } from './components/pages/PatternFirstPage'
 import { PatternSecondPage } from './components/pages/PatternSecondPage/PatternSecondPage'
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const queryClient = new QueryClient({
+const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      retry: false,
+      retry: true,
       refetchOnWindowFocus: false,
-    },
-    mutations: {
-      retry: false,
     },
   },
 })
-
-// export const queryClient = new QueryClient({})
 
 const router = createBrowserRouter([
   {

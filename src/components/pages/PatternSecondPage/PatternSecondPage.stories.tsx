@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { QueryClientProvider } from '@tanstack/react-query'
-import { queryClient } from '../../../App'
+import { StorybookWrapper } from '../../../utils/StorybookWrapper'
 import {
   buildFetch,
   buildFetchLoading,
@@ -13,9 +12,9 @@ const meta: Meta<typeof PatternSecondPage> = {
   component: PatternSecondPage,
   decorators: [
     (Story) => (
-      <QueryClientProvider client={queryClient}>
+      <StorybookWrapper>
         <Story />
-      </QueryClientProvider>
+      </StorybookWrapper>
     ),
   ],
 }
@@ -31,12 +30,12 @@ export const WithData: Story = {
 }
 
 // NOTE: api pending status is not correct working
-// export const Loading: Story = {
-//   render: (_args) => <PatternSecondPage />,
-//   parameters: {
-//     msw: [buildFetchLoading()],
-//   },
-// }
+export const Loading: Story = {
+  render: (_args) => <PatternSecondPage />,
+  parameters: {
+    msw: [buildFetchLoading()],
+  },
+}
 
 export const Error: Story = {
   render: (_args) => <PatternSecondPage />,
