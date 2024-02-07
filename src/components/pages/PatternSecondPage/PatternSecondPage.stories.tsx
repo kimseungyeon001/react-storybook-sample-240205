@@ -29,7 +29,6 @@ export const WithData: Story = {
   },
 }
 
-// NOTE: api pending status is not correct working
 export const Loading: Story = {
   render: (_args) => <PatternSecondPage />,
   parameters: {

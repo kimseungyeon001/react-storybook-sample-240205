@@ -35,7 +35,7 @@ export const Loading: Story = {
   args: {
     isLoading: true,
     errorMessage: undefined,
-    data: undefined,
+    data: '',
   },
 }
 
@@ -50,6 +50,6 @@ export const Error: Story = {
   args: {
     isLoading: false,
     errorMessage: 'error message',
-    data: undefined,
+    data: '',
   },
 }
