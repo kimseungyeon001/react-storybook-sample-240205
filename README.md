@@ -34,19 +34,31 @@ npm run storybook
 
 ## Introduction
 
-sample code for react storybook
+You can use the following two patterns together.
+I recommend you to use Pattern 1 for most components.
+You can use Pattern 2 for play function tests (test on Storybook).
 
-### Pattern 1
+### Pattern 1: src/components/pages/PatternFirstPge
 
-only storybook
+Storybook + props
 
-- merit: you can use with a simple configuration
-- demerit: you must divide the api calls and display area
+- PROS:
+  - Simple
+  - You can change a component's appearance by props
+- CONS:
+  - You need to split API calls from your components
+    - See PatternFirstPage component implementation,
+      - witch has a presenter component(without API calls) and component(with API calls)
 
+### Pattern 2: src/components/pages/PatternSecondPge
 
-### Pattern 2
+Storybook + msw
 
-storybook with msw
-
-- merit: you not need divide the api calls and display area
-- demerit: you must add an addon for the storybook
+- PROS:
+  - You can write play function tests on Storybook with mocks
+    - play function is a test code on Storybook
+    - with play function, it's easy to debug compared to jest/vitest on node.js
+    - play functions can be integrated into jest/vitest
+      - You can call play function tests from jest/vitest
+- CONS:
+  - Complicated
