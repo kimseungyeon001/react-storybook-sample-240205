@@ -4,12 +4,12 @@
 
 create the project
 ```
-git clone https://github.com/kimseungyeon001/react-storybook-sample.git
+git clone https://github.com/kimseungyeon001/react-storybook-sample-240205.git
 ```
 
 access the project directory
 ```
-cd react-storybook-sample
+cd react-storybook-sample-240205
 ```
 
 install dependencies
